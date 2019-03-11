@@ -7,6 +7,7 @@ class SingleConsole extends Component {
     const consoleId = Number(this.props.match.params.id)
     this.props.fetchSingleConsole(consoleId)
   }
+
   render() {
     const {name, companyName, price} = this.props.singleConsole
     return (
@@ -26,6 +27,7 @@ class SingleConsole extends Component {
 const mapStateToProps = state => ({
   singleConsole: state.consoles.singleConsole
 })
+
 const mapDispatchToProps = dispatch => {
   return {
     fetchSingleConsole: id => {
