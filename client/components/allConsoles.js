@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getAllConsoles} from '../store/console'
+import AllConsolesView from './allConsolesDum'
 
 class Consoles extends Component {
   componentDidMount() {
@@ -8,14 +9,10 @@ class Consoles extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <h3>All Consoles</h3>
-        {this.props.consoles &&
-          this.props.consoles.map(console => {
-            return <div key={console.name}>{console.name}</div>
-          })}
+        {this.props.consoles ? <AllConsolesView {...this.props} /> : null}
       </div>
     )
   }
