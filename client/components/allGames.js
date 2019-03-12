@@ -2,9 +2,9 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getAllGames} from '../store/game'
 import PlayStation from './PlayStation'
-import XboxOne from './XboxOne'
-import Pc from './Pc'
-import NintendoSwitch from './NintendoSwitch'
+// import XboxOne from './XboxOne'
+// import Pc from './Pc'
+// import NintendoSwitch from './NintendoSwitch'
 
 class Games extends Component {
   componentDidMount() {
@@ -15,12 +15,7 @@ class Games extends Component {
     return (
       <div>
         <h3>All Games</h3>
-        {this.props.games
-          ? (<PlayStation {...this.props} />,
-            <XboxOne {...this.props} />,
-            <Pc {...this.props} />,
-            <NintendoSwitch {...this.props} />)
-          : null}
+        {this.props.games ? <PlayStation {...this.props} /> : null}
       </div>
     )
   }
