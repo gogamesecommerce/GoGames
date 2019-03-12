@@ -1,5 +1,6 @@
 const User = require('./user')
 const Console = require('./console')
+const Game = require('./game')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -16,5 +17,6 @@ const Console = require('./console')
  */
 module.exports = {
   User,
-  Console
+  Console,
+  Game
 }
