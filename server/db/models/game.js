@@ -41,7 +41,7 @@ const Game = db.define('game', {
     type: Sequelize.STRING
   },
   price: {
-    type: Sequelize.INTEGER
+    type: Sequelize.DECIMAL
   },
   stock: {
     type: Sequelize.INTEGER
