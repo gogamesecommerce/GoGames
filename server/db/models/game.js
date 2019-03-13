@@ -39,6 +39,15 @@ const Game = db.define('game', {
   },
   releaseDate: {
     type: Sequelize.STRING
+  },
+  price: {
+    type: Sequelize.DECIMAL
+  },
+  stock: {
+    type: Sequelize.INTEGER
+  },
+  imageUrl: {
+    type: Sequelize.STRING
   }
 })
 
