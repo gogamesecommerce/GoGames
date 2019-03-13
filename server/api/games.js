@@ -10,3 +10,17 @@ router.get('/', async (req, res, next) => {
     next(error)
   }
 })
+
+router.get('/:id', async (req, res, next) => {
+  try {
+    const gameId = req.params.id
+    const singleGame = await Game.findOne({
+      where: {
+        id: gameId
+      }
+    })
+    res.json(singleGame)
+  } catch (error) {
+    next(error)
+  }
+})

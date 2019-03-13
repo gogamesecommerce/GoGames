@@ -6,8 +6,8 @@ router.get('/', async (req, res, next) => {
   try {
     const consoles = await Console.findAll()
     res.json(consoles)
-  } catch (err) {
-    next(err)
+  } catch (error) {
+    next(error)
   }
 })
 
@@ -20,7 +20,7 @@ router.get('/:id', async (req, res, next) => {
       }
     })
     res.json(singleConsole)
-  } catch (err) {
-    next(err)
+  } catch (error) {
+    next(error)
   }
 })
