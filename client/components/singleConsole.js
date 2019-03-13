@@ -9,14 +9,19 @@ class SingleConsole extends Component {
   }
 
   render() {
-    const {name, companyName, price} = this.props.singleConsole
+    const {name, companyName, price, imageUrl} = this.props.singleConsole
     return (
       <div>
         {this.props.singleConsole && (
           <div>
-            <div>{name}</div>
-            <div>{companyName}</div>
-            <div>${price}</div>
+            <div>
+              <img src={imageUrl} />
+            </div>
+            <div>
+              <div>{name}</div>
+              <div>{companyName}</div>
+              <div>${price}</div>
+            </div>
           </div>
         )}
       </div>
