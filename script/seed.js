@@ -7,12 +7,12 @@ async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  const users = await Promise.all([
+  await Promise.all([
     User.create({email: 'cody@email.com', password: '123'}),
     User.create({email: 'murphy@email.com', password: '123'})
   ])
 
-  const games = await Promise.all([
+  await Promise.all([
     Game.create({
       name: 'Destiny',
       publisher: 'activision',
@@ -83,7 +83,32 @@ async function seed() {
     })
   ])
 
-  console.log(`seeded ${users.length} users`)
+  await Promise.all([
+    Console.create({
+      name: 'Playstation 4',
+      companyName: 'Sony',
+      price: 299.99,
+      imageUrl: 'https://i.imgur.com/aHjwbd9.png',
+      stock: 100
+    }),
+    Console.create({
+      name: 'XboxOne',
+      companyName: 'Microsoft',
+      price: 249.99,
+      imageUrl:
+        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/xbox-720/d/de/Xbox_one_console_controller_too.jpg?width=640',
+      stock: 150
+    }),
+    Console.create({
+      name: 'Nintendo Switch',
+      companyName: 'Nintendo',
+      price: 299.99,
+      imageUrl:
+        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/nintendo-nx/e/eb/Switch--GENERIC3.jpg?fit=bounds&dpr=1&quality=75&crop=16%3A9&width=300',
+      stock: 200
+    })
+  ])
+
   console.log(`seeded successfully`)
 }
 

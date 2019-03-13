@@ -15,14 +15,20 @@ class SingleGame extends Component {
       developer,
       genre,
       description,
-      releaseDate
+      releaseDate,
+      price,
+      imageUrl
     } = this.props.singleGame
 
     return (
       <div>
         {this.props.singleGame && (
           <div>
+            <div>
+              <img src={imageUrl} />
+            </div>
             <div>Name: {name}</div>
+            <div>Price: ${price}</div>
             <div>Developer: {developer}</div>
             <div>Publisher: {publisher}</div>
             <div>Genre: {genre}</div>

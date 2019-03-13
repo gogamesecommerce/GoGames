@@ -9,7 +9,7 @@ const Console = db.define('console', {
     type: Sequelize.STRING
   },
   price: {
-    type: Sequelize.INTEGER
+    type: Sequelize.DECIMAL
   },
   imageUrl: {
     type: Sequelize.STRING
