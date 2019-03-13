@@ -8,7 +8,8 @@ import {
   UserHome,
   Consoles,
   SingleConsole,
-  Games
+  Games,
+  SingleGame
 } from './components'
 import {me} from './store'
 
@@ -30,7 +31,8 @@ class Routes extends Component {
         <Route path="/signup" component={SignUpUser} />
         <Route exact path="/consoles" component={Consoles} />
         <Route path="/consoles/:id" component={SingleConsole} />
-        <Route path="/games" component={Games} />
+        <Route exact path="/games" component={Games} />
+        <Route path="/games/:id" component={SingleGame} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}
