@@ -1,6 +1,7 @@
 const User = require('./user')
 const Console = require('./console')
 const Game = require('./game')
+const Accessory = require('./accessory')
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -8,7 +9,8 @@ const Game = require('./game')
  *
  *    BlogPost.belongsTo(User)
  */
-
+Accessory.belongsTo(Console)
+Console.hasMany(Accessory)
 /**
  * We'll export all of our models here, so that any time a module needs a model,
  * we can just require it from 'db/models'
@@ -18,5 +20,6 @@ const Game = require('./game')
 module.exports = {
   User,
   Console,
-  Game
+  Game,
+  Accessory
 }
