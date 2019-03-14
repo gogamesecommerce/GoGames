@@ -1,7 +1,7 @@
 'use strict'
 
 const db = require('../server/db')
-const {User, Game, Console} = require('../server/db/models')
+const {User, Game, Console, Accessory} = require('../server/db/models')
 
 async function seed() {
   await db.sync({force: true})
@@ -106,6 +106,45 @@ async function seed() {
       imageUrl:
         'https://oyster.ignimgs.com/mediawiki/apis.ign.com/nintendo-nx/e/eb/Switch--GENERIC3.jpg?fit=bounds&dpr=1&quality=75&crop=16%3A9&width=300',
       stock: 200
+    })
+  ])
+
+  await Promise.all([
+    Accessory.create({
+      consoleId: 1,
+      name: 'DualShock 4 Controller',
+      price: 44.99,
+      company: 'SONY',
+      sotck: 50,
+      imageUrl:
+        'https://images-na.ssl-images-amazon.com/images/I/71uQYNKiKCL._SX342_.jpg'
+    }),
+    Accessory.create({
+      consoleId: 2,
+      name: 'Xbox One Wireless Controller',
+      price: 49.99,
+      company: 'Microsoft',
+      sotck: 50,
+      imageUrl:
+        'https://target.scene7.com/is/image/Target/GUEST_cd803e6d-1173-4231-9304-a3a63cb966ec?wid=488&hei=488&fmt=pjpeg'
+    }),
+    Accessory.create({
+      consoleId: 3,
+      name: 'Nintendo Switch Joy-Con Controller',
+      price: 59.99,
+      company: 'Nintendo',
+      sotck: 50,
+      imageUrl:
+        'https://i5.walmartimages.com/asr/33c9f1e1-597e-4778-8f45-7e1d0e569c50_1.cb97f5123e61b43f76033ad836c0f75a.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF'
+    }),
+    Accessory.create({
+      consoleId: 3,
+      name: 'Nintendo Switch Pro Controller',
+      price: 54.99,
+      company: 'Nintendo',
+      sotck: 50,
+      imageUrl:
+        'https://target.scene7.com/is/image/Target/GUEST_4be586f0-a6e9-4ec1-9e2e-319632b94632?wid=488&hei=488&fmt=pjpeg'
     })
   ])
 

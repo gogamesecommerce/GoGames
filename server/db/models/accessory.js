@@ -13,6 +13,9 @@ const Accessory = db.define('Accessory', {
   },
   imageUrl: {
     type: Sequelize.STRING
+  },
+  stock: {
+    type: Sequelize.INTEGER
   }
 })
 
