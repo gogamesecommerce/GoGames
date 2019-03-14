@@ -11,7 +11,6 @@ class Accessories extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div>
         <h3>All Accessories</h3>
