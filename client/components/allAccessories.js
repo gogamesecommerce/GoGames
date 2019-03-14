@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {fetchAccessories} from '../store/accessory'
 import PlayStationAccessory from './PlayStationAccessory'
-// import XboxOneAccessory from './XboxOneAccessory'
+import XboxOneAccessory from './XboxOneAccessory'
 // import PcAccessory from './PcAccessory'
 // import NintendoAccessory from './NintendoAccessory'
 
