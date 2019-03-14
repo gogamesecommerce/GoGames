@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 const PlayStationAccessory = props => {
   console.log(props)
   let filterd = props.accessories.filter(
-    accessory => accessory.console.name === 'PlayStation 4'
+    accessory => accessory.console.name === 'Playstation 4'
   )
   return (
     <div>
