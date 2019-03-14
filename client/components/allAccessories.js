@@ -3,8 +3,7 @@ import {connect} from 'react-redux'
 import {fetchAccessories} from '../store/accessory'
 import PlayStationAccessory from './PlayStationAccessory'
 import XboxOneAccessory from './XboxOneAccessory'
-// import PcAccessory from './PcAccessory'
-// import NintendoAccessory from './NintendoAccessory'
+import NintendoAccessory from './NintendoAccessory'
 
 class Accessories extends Component {
   componentDidMount() {
@@ -20,7 +19,6 @@ class Accessories extends Component {
           <div>
             <PlayStationAccessory {...this.props} />
             <XboxOneAccessory {...this.props} />
-            <PcAccessory {...this.props} />
             <NintendoAccessory {...this.props} />
           </div>
         ) : null}

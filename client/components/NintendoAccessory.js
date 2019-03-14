@@ -1,14 +1,14 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const XboxOneAccessory = props => {
+const NintendoAccessory = props => {
   console.log(props)
   let filterd = props.accessories.filter(
-    accessory => accessory.console.name === 'XboxOne'
+    accessory => accessory.console.name === 'Nintendo Switch'
   )
   return (
     <div>
-      <h3>Xbox One Accessories</h3>
+      <h3>Nintendo Switch Accessories</h3>
       {filterd.map(accessory => {
         return (
           <div key={accessory.id}>
@@ -22,4 +22,4 @@ const XboxOneAccessory = props => {
   )
 }
 
-export default XboxOneAccessory
+export default NintendoAccessory
