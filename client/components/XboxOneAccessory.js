@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 
 const XboxOneAccessory = props => {
-  console.log(props)
   let filterd = props.accessories.filter(
     accessory => accessory.console.name === 'XboxOne'
   )
