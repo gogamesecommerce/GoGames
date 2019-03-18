@@ -10,7 +10,8 @@ import {
   SingleConsole,
   Games,
   SingleGame,
-  Accessories
+  Accessories,
+  SingleAccessory
 } from './components'
 import {me} from './store'
 
@@ -34,7 +35,8 @@ class Routes extends Component {
         <Route path="/consoles/:id" component={SingleConsole} />
         <Route exact path="/games" component={Games} />
         <Route path="/games/:id" component={SingleGame} />
-        <Route path="/accessories" component={Accessories} />
+        <Route exact path="/accessories" component={Accessories} />
+        <Route path="/accessory/:id" component={SingleAccessory} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}

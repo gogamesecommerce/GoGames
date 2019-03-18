@@ -15,7 +15,7 @@ class SingleAccessory extends Component {
         {this.props.singleAccessory && (
           <div>
             <div>
-              <img stc={imageUrl} />
+              <img src={imageUrl} />
             </div>
             <div>Name: {name}</div>
             <div>Made By: {company}</div>
@@ -28,7 +28,7 @@ class SingleAccessory extends Component {
 }
 
 const mapStateToProps = state => ({
-  singleAccessory: state.accessory.singleAccessory
+  singleAccessory: state.accessories.singleAccessory
 })
 const mapDispatchToProps = dispatch => ({
   fetchSingleAccessory: id => {

@@ -11,7 +11,7 @@ const NintendoAccessory = props => {
       {filterd.map(accessory => {
         return (
           <div key={accessory.id}>
-            <Link to={`/accessories/${accessory.id}`}>
+            <Link to={`/accessory/${accessory.id}`}>
               <div>{accessory.name}</div>
             </Link>
           </div>
