@@ -15,3 +15,17 @@ router.get('/', async (req, res, next) => {
     next(error)
   }
 })
+
+router.get('/:id', async (req, res, next) => {
+  try {
+    const accessoryId = req.params.id
+    const singleAccessory = await Accessory.findOne({
+      where: {
+        id: accessoryId
+      }
+    })
+    res.json(singleAccessory)
+  } catch (error) {
+    next(error)
+  }
+})
