@@ -28,3 +28,54 @@ form div {
   border-color: black;
   background-color: lightgray;
 }
+
+.loginSection {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+/* .goGamesLogo {
+  margin-right: 50%
+} */
+
+/* .loginSection {
+  display: block;
+} */
+
+/* .homePageLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+} */
+
+/* .home {
+  display: flex;
+  justify-content: flex-start;
+} */
+
+/* .logout {
+  display: inline-block;
+  width: 33%;
+} */
+
+/* .home {
+  display: inline-block;
+  width: 33%;
+  margin: auto;
+  padding-left: auto 0;
+}
+
+.accessories {
+  display: inline-block;
+  width: 33%;
+  margin: auto;
+  padding-right: auto 0;
+}
+
+.allAccessories {
+  width: 66%;
+} */
