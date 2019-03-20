@@ -8,7 +8,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
     <div>
       <Link to="/home">
-        <h1 className="goGamesLogo">Go Games</h1>
+        <h1 className="logo">Go Games</h1>
       </Link>
     </div>
     <nav>
