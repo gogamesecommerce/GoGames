@@ -6,26 +6,53 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>Go Games</h1>
+    <div>
+      <Link to="/home">
+        <h1 className="logo">Go Games</h1>
+      </Link>
+    </div>
     <nav>
-      {isLoggedIn ? (
-        <div>
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
-        </div>
-      ) : (
-        <div>
-          {/* The navbar will show these links before you log in */}
-          <Link to="/login">Login</Link>
-          <Link to="/signup">Sign Up</Link>
-        </div>
-      )}
-      <Link to="/consoles">All Consoles</Link>
-      <Link to="/games">All Games</Link>
-      <Link to="/accessories">All accessories</Link>
+      <div className="navbar">
+        {isLoggedIn ? (
+          <div className="loginSection">
+            {/* The navbar will show these links after you log in */}
+            <div>
+              <Link to="/home" className="home">
+                Home
+              </Link>
+            </div>
+            <div>
+              <Link to="/consoles" className="allConsoles">
+                All Consoles
+              </Link>
+              <Link to="/games">All Games</Link>
+              <Link to="/accessories" className="accessories">
+                All accessories
+              </Link>
+            </div>
+            <div>
+              <a href="#" className="logout" onClick={handleClick}>
+                Logout
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div className="loginSection">
+            {/* The navbar will show these links before you log in */}
+            <div>
+              <Link to="/consoles">All Consoles</Link>
+              <Link to="/games">All Games</Link>
+              <Link to="/accessories" className="allAccessories">
+                All accessories
+              </Link>
+            </div>
+            <div>
+              <Link to="/login">Login</Link>
+              <Link to="/signup">Sign Up</Link>
+            </div>
+          </div>
+        )}
+      </div>
     </nav>
     <hr />
   </div>
