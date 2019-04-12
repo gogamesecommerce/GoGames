@@ -10,8 +10,8 @@ class Consoles extends Component {
 
   render() {
     return (
-      <div>
-        <h3>All Consoles</h3>
+      <div className="container customCont">
+        <h3 className="text-center">All Consoles</h3>
         {this.props.consoles ? <AllConsolesView {...this.props} /> : null}
       </div>
     )

@@ -13,7 +13,7 @@ class Games extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h3>All Games</h3>
         {this.props.games ? (
           <div>
