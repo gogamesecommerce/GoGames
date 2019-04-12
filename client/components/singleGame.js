@@ -23,7 +23,7 @@ class SingleGame extends Component {
     return (
       <div>
         {this.props.singleGame && (
-          <div>
+          <div className="container text-center customCont">
             <div>
               <img src={imageUrl} />
             </div>
@@ -34,6 +34,11 @@ class SingleGame extends Component {
             <div>Genre: {genre}</div>
             <div>Release Date: {releaseDate}</div>
             <div>Description: {description}</div>
+            <div className="text-center">
+              <button type="button" className="btn btn-info button">
+                Add To Cart
+              </button>
+            </div>
           </div>
         )}
       </div>

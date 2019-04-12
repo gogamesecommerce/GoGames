@@ -12,7 +12,7 @@ class Accessories extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h3>All Accessories</h3>
         {this.props.accessories ? (
           <div>

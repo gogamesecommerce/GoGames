@@ -41,3 +41,11 @@ form div {
 .logo {
   height: 20px;
 }
+
+.button {
+  width: 20%;
+}
+
+.customCont {
+  border-color: white;
+}

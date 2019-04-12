@@ -88,7 +88,8 @@ async function seed() {
       name: 'Playstation 4',
       companyName: 'Sony',
       price: 299.99,
-      imageUrl: 'https://i.imgur.com/aHjwbd9.png',
+      imageUrl:
+        'https://i5.walmartimages.com/asr/33de3a32-863c-4457-9cce-1fb65036d73c_1.93c6433ebb65dc7ef7d0a3d30dee21fc.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF',
       stock: 100
     }),
     Console.create({
@@ -96,7 +97,7 @@ async function seed() {
       companyName: 'Microsoft',
       price: 249.99,
       imageUrl:
-        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/xbox-720/d/de/Xbox_one_console_controller_too.jpg?width=640',
+        'https://i5.walmartimages.com/asr/7ecbcfc4-e1ae-4a0a-a62d-d8c1f0f031fd_1.d68c518f6080e06278107a24c9e2fb1d.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF',
       stock: 150
     }),
     Console.create({
@@ -104,7 +105,7 @@ async function seed() {
       companyName: 'Nintendo',
       price: 299.99,
       imageUrl:
-        'https://oyster.ignimgs.com/mediawiki/apis.ign.com/nintendo-nx/e/eb/Switch--GENERIC3.jpg?fit=bounds&dpr=1&quality=75&crop=16%3A9&width=300',
+        'https://i5.walmartimages.com/asr/40e0e3c3-2708-4d7c-81fd-69412e0c03bb_1.9d95fc2218a68b08c67b278f1cb52f7e.jpeg?odnWidth=450&odnHeight=450&odnBg=ffffff',
       stock: 200
     })
   ])
